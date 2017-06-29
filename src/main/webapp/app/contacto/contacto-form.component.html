@@ -1,0 +1,19 @@
+<div>
+    <fieldset>
+        <form (ngSubmit)="saveContact()">
+            <label for="txtNameContact">Nombre Contacto</label>
+            <input id="txtNameContact" type="text" [(ngModel)]="contacto.nombreContacto" [ngModelOptions]="{standalone: true}"/>
+            <span *ngIf="errors.nameContact" class="con-error">El nombre de contacto es requerido.</span>
+            <label for="txtPhone">Teléfono</label>
+            <input id="txtPhone" type="text" [(ngModel)]="contacto.telefonoContacto" [ngModelOptions]="{standalone: true}"/>
+            <span *ngIf="errors.phone" class="con-error">El teléfono del contacto es requerido.</span>
+            <label for="txtRelation">Relación</label>
+            <input id="txtRelation" type="text" [(ngModel)]="contacto.relacion" [ngModelOptions]="{standalone: true}"/>
+            <span *ngIf="errors.relation" class="con-error">la relación con el contacto es requerida.</span>
+            <input type="button" value="Cancelar" (click)="clearForm()"/>
+            <input type="submit" value="Guardar"/>
+        </form>
+        <hr/>
+        <p>{{message}}</p>
+    </fieldset>
+</div>

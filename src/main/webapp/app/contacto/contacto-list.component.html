@@ -1,0 +1,29 @@
+<contacto-form (notify)="onNotify($event)" [contacto]="currentContact"></contacto-form>
+<hr/>
+<table class="table-details">
+    <thead>
+        <tr>
+            <th>Nombre Contacto</th>
+            <th>Relación</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor="let contacto of contactos">
+            <td>{{contacto.nombreContacto}}</td>
+            <td>{{contacto.telefonoContacto}}</td>
+            <td>{{contacto.relacion}}</td>
+            <td>
+                <a (click)="editContact(contacto)">
+                    <img src="img/edit.png" alt="Editar" title="Editar"/>
+                </a>
+                <a (click)="removeContact(contacto.idContacto)">
+                    <img src="img/remove.png" alt="Eliminar" title="Eliminar"/>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+    <div>
+        <label>{{message}}</label>
+    </div>
+</table>

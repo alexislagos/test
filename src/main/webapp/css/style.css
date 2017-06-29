@@ -1,0 +1,30 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container{
+    margin: auto;
+    width: 80%;
+    padding: 25px;
+}
+
+.con-error{
+    color:  red;
+}
+
+.table-details{
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-details th {
+    text-align: center;
+}
+
+.table-details td {
+    border: 1px solid #000;
+    padding-left: 15px;
+    text-align: left;
+}
